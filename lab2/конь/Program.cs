@@ -16,7 +16,7 @@ namespace конь
             int x2 = Convert.ToInt32(s2[0]);
             int y2 = Convert.ToInt32(s2[1]);
 
-            Console.WriteLine("Если фигура - конь, введите 1, если ладья - 2, слон - 3, ферзь - 4");
+            Console.WriteLine("Если фигура - конь, введите 1, если ладья - 2, слон - 3, ферзь - 4, пешка - 5, король - 6");
             int num =Convert.ToInt32(Console.ReadLine());
            
             if ((64 < x1) && (x1 < 73) && (64 < x2) && (x2 < 73) && (y1 > 48) && (y1 < 57) && (y2 > 48) && (y2 < 57))
@@ -34,6 +34,12 @@ namespace конь
                         break;
                     case 4:
                         Queen(ref x1, x2, y1, y2);
+                        break;
+                    case 5:
+                        Pawn(ref x1, x2, y1, y2);
+                        break;
+                    case 6:
+                        King(ref x1, x2, y1, y2);
                         break;
                 }
             }
@@ -76,7 +82,7 @@ namespace конь
 
         static void Pawn (ref int x1, int x2, int y1, int y2)
         {
-            if (y1-y2 !=0 && x1==x2)
+            if (y2-y1 =1 && x1==x2)
                 Console.WriteLine("верно");
             else
                 Console.WriteLine("неверно");
