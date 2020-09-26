@@ -73,5 +73,21 @@ namespace конь
             else
                 Console.WriteLine("неверно");
         }
+
+        static void Pawn (ref int x1, int x2, int y1, int y2)
+        {
+            if (y1-y2 !=0 && x1==x2)
+                Console.WriteLine("верно");
+            else
+                Console.WriteLine("неверно");
+        }
+
+        static void King (ref int x1, int x2, int y1, int y2)
+        {
+            if (Math.Abs(x1-x2)==1 || Math.Abs(y1-y2)==1)
+                Console.WriteLine("верно");
+            else
+                Console.WriteLine("неверно");
+        }
     }
 }
